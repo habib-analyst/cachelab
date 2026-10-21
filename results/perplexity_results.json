@@ -1,0 +1,79 @@
+{
+  "task": "streaming_perplexity",
+  "model": "Qwen2.5-0.5B-Instruct",
+  "dtype": "float32",
+  "doc": "Alice's Adventures in Wonderland (Gutenberg #11)",
+  "n_tokens": 3072,
+  "runs": [
+    {
+      "policy": "full",
+      "budget": null,
+      "ppl": 11.697,
+      "tokens_scored": 3071,
+      "time_s": 91.2,
+      "s_per_token": 0.0297,
+      "kept_tokens_max": 3072,
+      "cache_mb_final": 75.5
+    },
+    {
+      "policy": "sliding",
+      "budget": 1024,
+      "ppl": 45.577,
+      "tokens_scored": 3071,
+      "time_s": 77.4,
+      "s_per_token": 0.0252,
+      "kept_tokens_max": 1024,
+      "cache_mb_final": 25.17
+    },
+    {
+      "policy": "sliding",
+      "budget": 512,
+      "ppl": 48.954,
+      "tokens_scored": 3071,
+      "time_s": 75.6,
+      "s_per_token": 0.0246,
+      "kept_tokens_max": 512,
+      "cache_mb_final": 12.58
+    },
+    {
+      "policy": "streaming",
+      "budget": 1024,
+      "ppl": 11.902,
+      "tokens_scored": 3071,
+      "time_s": 82.1,
+      "s_per_token": 0.0267,
+      "kept_tokens_max": 1024,
+      "cache_mb_final": 25.17
+    },
+    {
+      "policy": "streaming",
+      "budget": 512,
+      "ppl": 12.419,
+      "tokens_scored": 3071,
+      "time_s": 68.9,
+      "s_per_token": 0.0224,
+      "kept_tokens_max": 512,
+      "cache_mb_final": 12.58
+    },
+    {
+      "policy": "h2o",
+      "budget": 1024,
+      "ppl": 11.884,
+      "tokens_scored": 3071,
+      "time_s": 72.0,
+      "s_per_token": 0.0234,
+      "kept_tokens_max": 1024,
+      "cache_mb_final": 25.17
+    },
+    {
+      "policy": "h2o",
+      "budget": 512,
+      "ppl": 12.1,
+      "tokens_scored": 3071,
+      "time_s": 67.5,
+      "s_per_token": 0.022,
+      "kept_tokens_max": 512,
+      "cache_mb_final": 12.58
+    }
+  ]
+}

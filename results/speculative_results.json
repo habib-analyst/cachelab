@@ -1,0 +1,193 @@
+{
+  "task": "speculative_decoding_greedy",
+  "draft": "Qwen2.5-0.5B-Instruct",
+  "target": "Qwen2.5-1.5B-Instruct",
+  "dtype": "bfloat16",
+  "max_new": 96,
+  "prompts": [
+    {
+      "prompt": "The history of the Roman Empire began when",
+      "prompt_tokens": 8,
+      "baseline": {
+        "tokens": 96,
+        "time_s": 64.03,
+        "tok_per_s": 1.5
+      },
+      "spec_k4": {
+        "tokens": 97,
+        "time_s": 60.42,
+        "tok_per_s": 1.61,
+        "speedup_vs_baseline": 1.071,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 30,
+        "draft_proposed": 120,
+        "draft_accepted": 67,
+        "acceptance_rate": 0.5583
+      },
+      "spec_k2": {
+        "tokens": 97,
+        "time_s": 54.637,
+        "tok_per_s": 1.78,
+        "speedup_vs_baseline": 1.184,
+        "identical_to_baseline": false,
+        "first_divergence_index": 19,
+        "rounds": 39,
+        "draft_proposed": 78,
+        "draft_accepted": 58,
+        "acceptance_rate": 0.7436
+      },
+      "spec_k6": {
+        "tokens": 98,
+        "time_s": 68.584,
+        "tok_per_s": 1.43,
+        "speedup_vs_baseline": 0.953,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 26,
+        "draft_proposed": 156,
+        "draft_accepted": 72,
+        "acceptance_rate": 0.4615
+      },
+      "baseline_text": " the Roman Republic was established in 509 BC. The Roman Republic was a period of the ancient Roman civilization, during which the power of the Roman Republic was exercised by the Roman Senate and the Roman magistrates. The Roman Republic was succeeded by the Roman Empire in 27 BC, when the Roman Senate granted the Roman Emperor Augustus the power to rule as a dictator for life. The Roman Empire was a period of the ancient Roman civilization, during which the power of"
+    },
+    {
+      "prompt": "To make a good omelette, you first need to",
+      "prompt_tokens": 12,
+      "baseline": {
+        "tokens": 96,
+        "time_s": 42.943,
+        "tok_per_s": 2.24
+      },
+      "spec_k4": {
+        "tokens": 97,
+        "time_s": 48.256,
+        "tok_per_s": 2.01,
+        "speedup_vs_baseline": 0.899,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 28,
+        "draft_proposed": 112,
+        "draft_accepted": 69,
+        "acceptance_rate": 0.6161
+      },
+      "spec_k2": {
+        "tokens": 98,
+        "time_s": 49.669,
+        "tok_per_s": 1.97,
+        "speedup_vs_baseline": 0.883,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 38,
+        "draft_proposed": 76,
+        "draft_accepted": 60,
+        "acceptance_rate": 0.7895
+      },
+      "spec_k6": {
+        "tokens": 99,
+        "time_s": 46.105,
+        "tok_per_s": 2.15,
+        "speedup_vs_baseline": 0.961,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 23,
+        "draft_proposed": 138,
+        "draft_accepted": 76,
+        "acceptance_rate": 0.5507
+      },
+      "baseline_text": " ____.\nA. heat the pan\nB. add the eggs\nC. add the cheese\nD. add the vegetables\nAnswer:\nA\n\nWhich of the following statements about the characteristics of the Qing Dynasty's cabinet system is incorrect?\nA. The cabinet was a temporary institution.\nB. The cabinet was a decision-making body.\nC. The cabinet was a supervisory body.\nD. The cabinet was a deliberative body.\nAnswer:\nD\n\nWhich of the following statements"
+    },
+    {
+      "prompt": "The mitochondria is known as the powerhouse of the cell because",
+      "prompt_tokens": 12,
+      "baseline": {
+        "tokens": 96,
+        "time_s": 40.776,
+        "tok_per_s": 2.35
+      },
+      "spec_k4": {
+        "tokens": 98,
+        "time_s": 42.447,
+        "tok_per_s": 2.31,
+        "speedup_vs_baseline": 0.981,
+        "identical_to_baseline": false,
+        "first_divergence_index": 32,
+        "rounds": 27,
+        "draft_proposed": 108,
+        "draft_accepted": 71,
+        "acceptance_rate": 0.6574
+      },
+      "spec_k2": {
+        "tokens": 98,
+        "time_s": 47.814,
+        "tok_per_s": 2.05,
+        "speedup_vs_baseline": 0.871,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 39,
+        "draft_proposed": 78,
+        "draft_accepted": 59,
+        "acceptance_rate": 0.7564
+      },
+      "spec_k6": {
+        "tokens": 102,
+        "time_s": 47.711,
+        "tok_per_s": 2.14,
+        "speedup_vs_baseline": 0.908,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 25,
+        "draft_proposed": 150,
+        "draft_accepted": 77,
+        "acceptance_rate": 0.5133
+      },
+      "baseline_text": " it produces energy in the form of ATP. The mitochondria is also known as the powerhouse of the cell because it produces energy in the form of ATP. Is the following statement true?\nYes, the statement is true. The mitochondria is indeed known as the powerhouse of the cell because it plays a crucial role in producing energy for the cell through a process called cellular respiration. This process involves the breakdown of glucose and other organic molecules to produce ATP, which is the primary energy"
+    },
+    {
+      "prompt": "In a shocking turn of events, scientists announced yesterday that",
+      "prompt_tokens": 11,
+      "baseline": {
+        "tokens": 96,
+        "time_s": 41.095,
+        "tok_per_s": 2.34
+      },
+      "spec_k4": {
+        "tokens": 98,
+        "time_s": 60.946,
+        "tok_per_s": 1.61,
+        "speedup_vs_baseline": 0.688,
+        "identical_to_baseline": false,
+        "first_divergence_index": 20,
+        "rounds": 36,
+        "draft_proposed": 144,
+        "draft_accepted": 62,
+        "acceptance_rate": 0.4306
+      },
+      "spec_k2": {
+        "tokens": 96,
+        "time_s": 50.377,
+        "tok_per_s": 1.91,
+        "speedup_vs_baseline": 0.816,
+        "identical_to_baseline": false,
+        "first_divergence_index": 88,
+        "rounds": 46,
+        "draft_proposed": 92,
+        "draft_accepted": 50,
+        "acceptance_rate": 0.5435
+      },
+      "spec_k6": {
+        "tokens": 100,
+        "time_s": 65.34,
+        "tok_per_s": 1.53,
+        "speedup_vs_baseline": 0.655,
+        "identical_to_baseline": true,
+        "first_divergence_index": null,
+        "rounds": 37,
+        "draft_proposed": 222,
+        "draft_accepted": 63,
+        "acceptance_rate": 0.2838
+      },
+      "baseline_text": " they have discovered a new species of dinosaur that lived in the same time period as the famous T. Rex. The new species, which they have named \"T. Rex Junior,\" is believed to have been smaller and more agile than its famous cousin. The discovery was made by a team of paleontologists who were studying a fossil site in the remote mountains of Mongolia. The team spent months carefully excavating the site, and finally uncovered a nearly complete skeleton of the new species."
+    }
+  ]
+}
