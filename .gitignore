@@ -1,0 +1,5 @@
+# Model weights are downloaded, never committed (2.9 GB).
+models/
+logs/
+__pycache__/
+*.pyc
